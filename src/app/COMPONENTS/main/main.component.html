@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="results-section">
+    <h3>Results</h3>
+    <div class="items-container">
+      <ng-container *ngFor="let item of bookArray;let idx=index">
+        <div class="item" (click)="getBookDetails(0)">
+          <div class="item-image">
+            <img src={{item.img}}>
+          </div>
+          <div class="item-details">
+            <h3>{{item.name}}
+            </h3>
+            <p>{{item.author}} | 1 May 2019</p>
+            
+            <span>Paperback</span>
+            <div class="price">
+              <div class="price-container">
+                <span class="original-price">M.R.P: ₹{{item.ogPrice}}</span>
+                <span class="discounted-price">₹{{item.discountPrice}}</span>
+                <span class="discount">47% off</span>
+              </div>
+             
+              <ng-container *ngIf="bookDetails">
+                <div class="desc">
+                    <p>{{item.desc}}</p>
+                  </div>
+              </ng-container>
+              
+            </div>
+          </div>
+        </div>
+        </ng-container>
+    </div>
+  </div>
+</div>

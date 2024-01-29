@@ -1,0 +1,54 @@
+.main-container{
+    padding: 5px;
+}
+.results-section{
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.items-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(231, 230, 230);
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+.item-details{
+    padding: 5px;
+    margin-left: 15px;
+}
+.price{
+    margin-top: 10px;
+}
+
+.price-whole{
+    font-size: 28px;
+}
+.price-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  .original-price {
+    color: #888; /* Original price color */
+    text-decoration: line-through; /* Strikethrough */
+  }
+  
+  .discounted-price {
+    color: #333; /* Discounted price color */
+    font-size: 1.2em; /* Larger font size for discounted price */
+  }
+  
+  .discount {
+    color: green; /* Discount percentage color */
+    font-weight: bold;
+  }
+
+.desc{
+    margin-top: 10px;
+}
