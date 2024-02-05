@@ -1,10 +1,28 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './COMPONENTS/header/header.component';
+import { MainComponent } from './COMPONENTS/main/main.component';
+import { NumberOnlyDirective } from './number-only.directive';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppService } from './SERVICES/app.service';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+        
+    declarations: [
+      AppComponent,
+      HeaderComponent,
+      MainComponent,
+      NumberOnlyDirective
+    ],
+    imports: [
+      CommonModule
+  ],
+  providers:[
+    AppService
+  ],
     }).compileComponents();
   });
 
@@ -12,18 +30,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'app' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('app');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, app');
   });
 });

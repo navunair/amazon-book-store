@@ -51,7 +51,7 @@ export class MainComponent implements OnInit{
       }
     ]
   }
-  constructor(private appService: AppService){}
+  // constructor(private appService: AppService){}
 
   public getBookDetails(index:number):void{
     if(this.bookDetails){
